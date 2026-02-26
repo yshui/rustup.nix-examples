@@ -14,7 +14,12 @@
       flake = false;
     };
 
-    # .. if you want to use a pinned version of the rust toolchain:
+    # .. if you want to use a pinned version of the rust toolchain, that's also possible.
+    # in fact, this is RECOMMENDED for public facing flakes. because the content of un-dated
+    # rust toolchain manifest changes everyday, user of your flake will see hash mismatches since
+    # the manifest they downloaded will be different from the one used to create flake.lock.
+    #
+    # if you are writing a public facing flake, use an explicitly dated manifest.
     rust-manifest-pinned = {
       url = "https://static.rust-lang.org/dist/2026-02-04/channel-rust-nightly.toml";
       flake = false;
@@ -46,7 +51,7 @@
           # by looking at the manifest file.
           # usually, there will be `complete`, `default`, and `minimal`.
           #
-          # by default, a toolchain for the current system is created.
+          # by default, a toolchain targetting the current system is created.
           rustToolchain = (pkgs.rustToolchainFromManifestFile rust-manifest).minimal;
 
           # .. you can create toolchain for a different target, by overriding it:
