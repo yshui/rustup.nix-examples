@@ -1,0 +1,56 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1771848320,
+        "narHash": "sha256-0MAd+0mun3K/Ns8JATeHT1sX28faLII5hVLq0L3BdZU=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "2fc6539b481e1d2569f25f8799236694180c0993",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "rust-manifest": "rust-manifest",
+        "rustup": "rustup"
+      }
+    },
+    "rust-manifest": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-hFAY2+4oQ2B1YZmUr2auYUXFe7BvUGafKkytThLz03w=",
+        "type": "file",
+        "url": "https://static.rust-lang.org/dist/channel-rust-nightly.toml"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://static.rust-lang.org/dist/channel-rust-nightly.toml"
+      }
+    },
+    "rustup": {
+      "locked": {
+        "lastModified": 1772114247,
+        "narHash": "sha256-b2vPCvaJn4v2LPUJSNgOaeR4njDfa2ZbrA8WOKPx8V8=",
+        "owner": "yshui",
+        "repo": "rustup.nix",
+        "rev": "bd3c0847a5d444936c150e7e946feb9633b870d2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yshui",
+        "repo": "rustup.nix",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
